@@ -11,9 +11,22 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    .row_languages
+    {
+        padding: 0px 81px 0px 81px;
+        .title
+        {
+            color: #707070;
+            font-size:15px;
+            letter-spacing: -1px;
+            font-weight: 500;
+        }
+        
+    }
     .row_form
     {
-        height: 100%;
+        padding: 0px 81px 0px 81px;
+        height: 90%;
     }
     .formLogin
     {
@@ -50,7 +63,7 @@
         h1.title
         {
             color:#333F48;
-            size:68px;
+            size:80px;
             font-weight: 700;
         } 
         a.remember

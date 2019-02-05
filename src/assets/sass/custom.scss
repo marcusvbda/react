@@ -1,5 +1,81 @@
-$red : rgb(230, 13, 13);
-
-h1.red{
-    color:$red;
+.full_width
+{
+    width: 100%;
 }
+.triangle_login
+{
+    position: absolute;
+    width:100%;
+    min-height: 100%;
+    background-image: url("files/background_login.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .row_form
+    {
+        height: 100%;
+    }
+    .formLogin
+    {
+        .label_input
+        {
+            p
+            {
+                font-weight: 500;
+            }
+        }
+        .forget
+        {
+            padding-top:10px;
+            letter-spacing: -1px;
+            .text
+            {
+                color:#A2AAAD;
+                font-size :15px;
+                text-decoration: underline;
+            }
+        }
+        .input 
+        {
+            width: 100%;
+        }
+        .remember
+        {
+            .MuiFormControlLabel-label-81
+            {
+                letter-spacing: -1px;
+            }
+        }
+        
+        h1.title
+        {
+            color:#333F48;
+            size:68px;
+            font-weight: 700;
+        } 
+        a.remember
+        {
+            color:#A2AAAD;
+            size:10px;
+        } 
+        button.btnlogin
+        {
+            color:white;
+            background-color: #333F48;
+            width: 150px;
+            height: 50px;
+            font-size: 18px;
+            border-radius: 0;
+        }
+    }
+
+
+}
+.logo_morales_login
+{
+    width: 200px;
+    top: -350px;
+    position: absolute;
+    left: 807px;
+}
+

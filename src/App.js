@@ -6,8 +6,7 @@ import _App from "./assets/default/_App";
 import { Redirect } from 'react-router';
 import Login from './components/Login/Login';
 import Welcome from './components/Admin/Welcome/Welcome';
-// import NotFound from './components/Error/NotFound';
-import Home from './components/Admin/Home/Home';
+import ResumeCreate from './components/Admin/Resume/Create';
 import Loading from './components/Loading/Loading';
 
 class App extends React.Component {
@@ -28,7 +27,7 @@ class App extends React.Component {
   {
     if(!this.isLogged())
     {
-      return <Redirect to="login"/>
+      return <Redirect to="/login"/>
     }
     return val;
   }
@@ -37,10 +36,10 @@ class App extends React.Component {
             <Loading Loading={this._app.get("loading")}/>
             <Router>
               <div>
+                <Route exact path="/" render={() => <Redirect to="/login"/> } />
                 <Route exact path="/login" render={() => <Login _app={this._app} /> } />
-                <Route exact path="/" render={() => this.protect_route(<Home  _app={this._app}/>)} />
-                <Route exact path="/welcome" render={() => this.protect_route(<Welcome  _app={this._app}/>)} /> */}
-                {/* <Route path="*"  render={() => <NotFound  _app={this._app}/>} /> */}
+                <Route exact path="/welcome" render={() => this.protect_route(<Welcome  _app={this._app}/>)} />
+                <Route exact path="/resume/create" render={() => this.protect_route(<ResumeCreate  _app={this._app}/>)} />
               </div>
             </Router>
           </div>          

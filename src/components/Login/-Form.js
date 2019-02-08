@@ -4,7 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Translate from '../Language/-Translate';
-import { Redirect } from 'react-router'
+import { Redirect } from 'react-router';
 import Swal from 'sweetalert2';
 
 class Form extends Component {

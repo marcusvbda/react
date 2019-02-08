@@ -1,28 +1,42 @@
 import React, { Component } from 'react';
 import Translate from '../../Language/-Translate';
 import  './Style/-Custom.scss';
+import Languages from '../../Language/-Languages';
+import { Redirect } from 'react-router';
 
 class Welcome extends Component {
     constructor(props) {
         super(props);
-        this.state = {  };
+        this.state = { continue : false };
         this.props._app.set({loading:false});
+        this.continue = this.continue.bind(this);
     }
-
+    continue()
+    {
+      this.setState({continue:true});
+    }
   render() {
-    return  <div className="welcome_row">
+    return  (this.state.continue) ? <Redirect to="/resume/create" />:
+            <div className="welcome_row">
+              <div className="row row_languages">
+                <div className="col-12 row_flag  text-right">
+                  <Languages _app={this.props._app} />
+                </div>
+              </div>
+
               <div className="row d-flex align-items-center">
                   <div className="col-12">
                     <div className="row pt-4">
-                      <div className="col-12 text-center title">
+                      <div className="col-12 text-center _title">
                         <span className="p-0 row title_welcome"><h1 className="col-12"><Translate _app={this.props._app}>welcome.welcome_to</Translate></h1></span>
                         <span className="p-0 row title_company"><h1 className="col-12"><b className="mr-4">MORALES</b><small>GROUP</small></h1></span>
                         <span className="pt-2 row title_description"><h4 className="col-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4></span>
                       </div>
                     </div>
+
                     <div className="row">
-                      <div className="col-12 text-center title">
-                        <button className="btn_continue"><Translate _app={this.props._app}>welcome.continue</Translate></button>
+                      <div className="col-12 text-center _title">
+                        <button onClick={this.continue} className="btn_continue"><Translate _app={this.props._app}>welcome.continue</Translate></button>
                       </div>
                     </div>
                   </div>

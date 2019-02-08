@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import english from '../../assets/langs/english.js'; 
-import spanish from '../../assets/langs/spanish.js'; 
+import english from './Files/english.js'; 
+import spanish from './Files/spanish.js'; 
 
 class Translate extends Component {
   constructor(props) {

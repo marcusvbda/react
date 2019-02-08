@@ -1,0 +1,62 @@
+
+.welcome_row
+{
+    overflow: hidden;
+    position: absolute;
+    width:100%;
+    min-height: 100%;
+    background-image: url("Files/background_welcome.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .btn_continue
+    {
+        padding: 8px 28px 8px 28px;
+        background-color: white;
+        border: 2px solid #333F48;
+        color: #333F48;
+        font-weight: 600;
+    }
+    .btn_continue:hover
+    {
+        background-color: #333F48;
+        color: white;
+        font-weight: 600;
+        transition :.5s;
+    }
+    .title
+    {
+        color: white;
+        margin-top: 168px;
+    }
+    .title_welcome
+    {
+        h1
+        {
+            font-size: 48px;
+        }
+    }
+    .title_description
+    {
+        padding: 0px 500px 0px 500px;
+        h4
+        {
+            font-size: 30px;
+            font-weight: 100;
+            letter-spacing: -1px;
+        }
+    }
+    .title_company
+    {
+        h1
+        {
+            font-size: 69px;
+        }
+        small
+        {
+            font-size: 69px;
+            font-weight: 100;
+            letter-spacing: -1px;
+        }
+    }
+}

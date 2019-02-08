@@ -10,4 +10,9 @@ module.exports = {
 
     "debug.welcome" : "Welcome" ,
     "debug.home" : "Home" ,
+
+    "welcome.welcome_to" : "WELCOME TO" ,
+    "welcome.continue" : "CONTINUE" ,
+
+
 } 

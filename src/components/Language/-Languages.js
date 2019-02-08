@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Translate from '../Language/-Translate';
+import  './Style/-Custom.scss';
 
 class Languages extends Component {
   constructor(props) {

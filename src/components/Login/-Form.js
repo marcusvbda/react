@@ -5,6 +5,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Translate from '../Language/-Translate';
 import { Redirect } from 'react-router'
+import Swal from 'sweetalert2';
 
 class Form extends Component {
     constructor(props) {
@@ -21,11 +22,26 @@ class Form extends Component {
     };
     handleSubmit(e) {
       e.preventDefault();
-        let user = {name: "paul rudd",movies: ["I Love You Man", "Role Models"]};
+        this.props._app.set({loading:true});        
+        let user = {username: this.state.username ,password : this.state.password };
         this.props._app.api_post("POST","https://reqres.in/api/users",user,function(response)
         {
-            console.log(response);
+            if(!response)
+            {
+                this.props._app.set({loading:false});
+                return Swal.fire({
+                  title: 'Error!',
+                  text: "response.message",
+                  type: 'error',
+                  confirmButtonText: 'OK'
+                });
+            }
             this.props._app.set({auth:{check:true,user:user}});
+        }.bind(this),
+        function(error)
+        {
+            console.log(error);
+            this.props._app.set({loading:false});
         }.bind(this));
     }
 

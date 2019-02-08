@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Form from './-Form';
 import Languages from '../Language/-Languages';
-
+import  './Style/-Custom.scss';
 
 
 class Login extends Component {

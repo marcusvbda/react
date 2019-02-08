@@ -5,4 +5,9 @@ module.exports = {
     "login.remember" : "¿ Recuérdame ?",
     "login.forget_user" : "Yo Olvidé la contraseña",
     "login.login" : "ENTRAR",
+
+    "translator.language" : "Idioma",
+
+    "debug.welcome" : "Bienvenido" ,
+    "debug.home" : "Inicio" ,
 } 

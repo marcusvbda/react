@@ -1,23 +1,37 @@
 import React, { Component } from 'react';
+import Translate from '../Language/-Translate';
 
 class Languages extends Component {
   constructor(props) {
     super(props);
     this.state = {};
     this.select = this.select.bind(this);
+    this.check = this.check.bind(this);
   }
 
   select(lang)
   {
     this.props._app.set({language:lang});
   }
+
+  check(lang)
+  {
+    if((this.props._app.get("language")===lang))
+    {
+      return 'selected mr-1';
+    }
+    else
+    {
+      return 'non-selected mr-1';
+    }
+  }
   
   render() {
     return  <div>
-                <p className="title mb-1">Languages</p>
-                <p>
-                    <img onClick={(e) => this.select("english")}  className="mr-1" src="assets/images/unitedStates.svg" alt="English"></img>
-                    <img onClick={(e) => this.select("spanish")} className="ml-1" src="assets/images/spain.svg" alt="Spanish"></img>
+                <div className="title mb-1"><Translate _app={this.props._app}>translator.language</Translate></div>
+                <p className="row_flag">
+                    <img  className={this.check("english")} onClick={(e) => this.select("english")}  src="assets/images/unitedStates.svg" alt="English"></img>
+                    <img  className={this.check("spanish")} onClick={(e) => this.select("spanish")}  src="assets/images/spain.svg" alt="Spanish"></img>
                 </p>
             </div>;
   }

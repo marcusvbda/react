@@ -1,3 +1,7 @@
 module.exports = {
-    language : "english"
+    language : "english",
+    auth : {
+        check:false,
+        user:[]
+    }
 } 

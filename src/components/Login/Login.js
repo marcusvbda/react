@@ -3,10 +3,12 @@ import Form from './-Form';
 import Languages from '../Language/-Languages';
 
 
+
 class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {  };
+        this.props._app.set({auth:{check:false,user:[]}});
     }
 
   render() {

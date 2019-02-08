@@ -4,13 +4,14 @@ import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Translate from '../Language/-Translate';
+import { Redirect } from 'react-router'
 
 class Form extends Component {
     constructor(props) {
       super(props);
       this.state = {
           username:"teste@teste.com",
-          password:"teste",
+          password:"teste"
       };
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,16 +21,18 @@ class Form extends Component {
     };
     handleSubmit(e) {
       e.preventDefault();
-        let data = {name: "paul rudd",movies: ["I Love You Man", "Role Models"]};
-        this.props._app.ajax("POST","https://reqres.in/api/users'",data,function(response)
+        let user = {name: "paul rudd",movies: ["I Love You Man", "Role Models"]};
+        this.props._app.api_post("POST","https://reqres.in/api/users",user,function(response)
         {
             console.log(response);
-            console.log(this.state);
+            this.props._app.set({auth:{check:true,user:user}});
         }.bind(this));
     }
+
     
     render() {
-        return <div className="full_width">
+        return (this.props._app.get("auth").check) ? <Redirect to="/welcome" />:
+        <div className="full_width">
             <form className='formLogin' onSubmit={this.handleSubmit}>
                 <div className="row">
                     <div className="col-md-12">

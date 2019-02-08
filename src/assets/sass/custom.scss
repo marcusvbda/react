@@ -21,6 +21,18 @@
             letter-spacing: -1px;
             font-weight: 500;
         }
+        .row_flag 
+        {
+            cursor: pointer;
+            .non-selected
+            {
+                opacity: .3;
+            }
+            .selected
+            {
+                opacity: none;
+            }
+        }
         
     }
     .row_form

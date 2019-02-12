@@ -8,3 +8,66 @@
 {
     background-color:#474647;
 }
+.logoMenu
+{
+    width: 120px;
+}
+.nav-item
+{
+    margin-top:2px;
+    background-color : #363434
+}
+.nav-item.active
+{
+    background-color:#1D252D;
+}
+
+.text-black-800
+{
+    color : #363434;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.nav_items
+{
+    font-size: 12px;
+    .item.active
+    {
+        color:black;
+        font-weight: 500;
+    }
+    .item 
+    {
+        margin: 10px;
+        color:#969797;
+    }
+    .separator
+    {
+        font-size: 37px;
+        font-weight: 100;
+        margin-bottom: 5px;
+        color:#969797;
+        opacity: .5;
+    }
+}
+
+.nav-item.dropdown
+{
+    background-color: #D0D3D4;
+}
+.nav-drop-text
+{
+    color : #7C878E;
+    font-weight: 500;
+}
+
+#content
+{
+    color:black;
+}
+
+.arrow-custom
+{
+    color: #7C878E;
+}

@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Interstate";
+    src: url("files/Interstate-Bold.ttf");
+    src: url("files/InterstateBlack.ttf");
+}
+    
+html{
+    font-family: 'Interstate', Arial, sans-serif;
+    font-weight:normal;
+    font-style:normal;
+}

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Translate from '../../Language/-Translate';
 import  './Style/-Custom.scss';
-import Languages from '../../Language/-Languages';
 import { Redirect } from 'react-router';
 
 class Welcome extends Component {
@@ -18,12 +17,7 @@ class Welcome extends Component {
   render() {
     return  (this.state.continue) ? <Redirect to="/resume/create" />:
             <div className="welcome_row">
-              <div className="row row_languages">
-                <div className="col-12 row_flag  text-right">
-                  <Languages _app={this.props._app} />
-                </div>
-              </div>
-
+            
               <div className="row d-flex align-items-center">
                   <div className="col-12">
                     <div className="row pt-4">

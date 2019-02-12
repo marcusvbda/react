@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import english from './Files/english.js'; 
 import spanish from './Files/spanish.js'; 
 
@@ -16,9 +16,7 @@ class Translate extends Component {
       return (text ? text : this.props.children);
   };
   render() {
-    return <div>
-      {this.getValue()}
-    </div>;
+    return this.getValue();
   }
 }
 

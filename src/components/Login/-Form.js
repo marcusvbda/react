@@ -12,13 +12,21 @@ class Form extends Component {
       super(props);
       this.state = {
           username:"teste@teste.com",
-          password:"teste"
+          password:"teste",
+          remember : "unchecked"
       };
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
     handleChange = name => event => {
-      this.setState({ [name]: event.target.value });
+        if(name==="remember")
+        {
+            if(this.state.remember==="checked" )
+                return this.setState({ [name]: "uncheked" });
+            else
+                return this.setState({ [name]: "checked" });
+        }
+        return this.setState({ [name]: event.target.value });
     };
     handleSubmit(e) {
       e.preventDefault();
@@ -35,6 +43,10 @@ class Form extends Component {
                   type: 'error',
                   confirmButtonText: 'OK'
                 });
+            }
+            if(this.state.remember==="checked")
+            {
+                localStorage.setItem('auth_data', JSON.stringify({username:this.state.username,language:this.props._app.get("language")}));
             }
             this.props._app.set({auth:{check:true,user:user}});
         }.bind(this),
@@ -83,7 +95,7 @@ class Form extends Component {
                     <div className="col-md-6">
                         <FormControlLabel className="remember"
                             control={
-                                <Checkbox value="remember" />
+                                <Checkbox  value={this.state.remember} onChange={this.handleChange('remember')} />
                             }
                             label={<Translate _app={this.props._app}>login.remember</Translate>}
                         />

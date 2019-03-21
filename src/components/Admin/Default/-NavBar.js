@@ -1,25 +1,49 @@
 import React, { Component } from 'react';
-import Translate from '../../Language/-Translate';
+import NavStep1 from './NavStep/-NavStep1';
+import NavStep2 from './NavStep/-NavStep2';
+import NavStep3 from './NavStep/-NavStep3';
+import NavStep4 from './NavStep/-NavStep4';
+import NavStep5 from './NavStep/-NavStep5';
+import NavStep6 from './NavStep/-NavStep6';
+import NavStep7 from './NavStep/-NavStep7';
+
 
 class NavBar extends Component {
+    constructor(props) {
+      super(props);
+      this.change = this.change.bind(this);
+    }
+    
+    change(value) {
+      this.props._app.set({ resume : {step : 1 ,bar_step : value} });
+    }
+    
+    getBar() {
+        switch(this.props._app.get("resume").step) {
+            case 1:
+              return <NavStep1  _app={this.props._app}/>;
+            case 2:
+              return <NavStep2  _app={this.props._app}/>;
+            case 3:
+              return <NavStep3  _app={this.props._app}/>;
+            case 4:
+              return <NavStep4  _app={this.props._app}/>;
+            case 5:
+              return <NavStep5  _app={this.props._app}/>;
+            case 6:
+              return <NavStep6  _app={this.props._app}/>;
+            case 7:
+              return <NavStep7  _app={this.props._app}/>;
+            default:
+              return null;
+          }
+    }
 
     render() {
         return  <div>
                     <nav className="navbar pr-0 mt-0 navbar-expand navbar-light bg-white-custom topbar mb-4 static-top shadow">
                         <div className="nav_items d-flex align-items-center">
-                            <a href="/" className="item active"><b>1.</b><Translate _app={this.props._app}>navbar.base_information</Translate></a>
-                            <span className="separator">/</span>
-                            <a href="/"  className="item"><b>2.</b><Translate _app={this.props._app}>navbar.pre_screening</Translate></a>
-                            <span className="separator">/</span>
-                            <a href="/" className="item"><b>3.</b><Translate _app={this.props._app}>navbar.pre_employment</Translate></a>
-                            <span className="separator">/</span>
-                            <a href="/" className="item"><b>4.</b><Translate _app={this.props._app}>EEO</Translate></a>
-                            <span className="separator">/</span>
-                            <a href="/" className="item"><b>5.</b><Translate _app={this.props._app}>navbar.contact_information</Translate></a>
-                            <span className="separator">/</span>
-                            <a href="/" className="item"><b>6.</b><Translate _app={this.props._app}>navbar.resume</Translate></a>
-                            <span className="separator">/</span>
-                            <a  href="/" className="item"><b>7.</b><Translate _app={this.props._app}>navbar.skills</Translate></a>
+                            {this.getBar()}
                         </div>
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item dropdown">

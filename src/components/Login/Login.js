@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Form from './-Form';
-import Languages from '../Language/-Languages';
 import  './Style/-Custom.scss';
 
 
@@ -17,11 +16,6 @@ class Login extends Component {
                     <div className="row row_form">
                         <div className="col-md-12 d-flex align-items-center">
                           <Form _app={this.props._app} />
-                        </div>
-                    </div>
-                    <div className="row row_languages">
-                        <div className="col-md-12">
-                            <Languages _app={this.props._app} />
                         </div>
                     </div>
                 </div>

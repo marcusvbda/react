@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Translate from '../../Language/-Translate';
 import  './Style/-Custom.scss';
 import { Redirect } from 'react-router';
 
@@ -22,7 +21,7 @@ class Welcome extends Component {
                   <div className="col-12">
                     <div className="row pt-4">
                       <div className="col-12 text-center _title">
-                        <span className="p-0 row title_welcome"><h1 className="col-12"><Translate _app={this.props._app}>welcome.welcome_to</Translate></h1></span>
+                        <span className="p-0 row title_welcome"><h1 className="col-12">Welcome to</h1></span>
                         <span className="p-0 row title_company"><h1 className="col-12"><b className="mr-4">MORALES</b><small>GROUP</small></h1></span>
                         <span className="pt-2 row title_description"><h4 className="col-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4></span>
                       </div>
@@ -30,7 +29,7 @@ class Welcome extends Component {
 
                     <div className="row">
                       <div className="col-12 text-center _title">
-                        <button onClick={this.continue} className="btn_continue"><Translate _app={this.props._app}>welcome.continue</Translate></button>
+                        <button onClick={this.continue} className="btn_continue">Continue</button>
                       </div>
                     </div>
                   </div>

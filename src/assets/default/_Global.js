@@ -1,6 +1,9 @@
 module.exports = {
     loading : false,
-    language : "english",
+    resume : {
+        step : 1,
+        bar_step : 1
+    },
     auth : {
         check:false,
         user:[]

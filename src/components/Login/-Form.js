@@ -3,7 +3,6 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import Translate from '../Language/-Translate';
 import { Redirect } from 'react-router';
 import Swal from 'sweetalert2';
 
@@ -64,7 +63,7 @@ class Form extends Component {
             <form className='formLogin' onSubmit={this.handleSubmit}>
                 <div className="row">
                     <div className="col-md-12">
-                        <h1 className="title mb-4"><Translate _app={this.props._app}>login.title</Translate></h1>
+                        <h1 className="title mb-4">Login</h1>
                     </div>
                 </div>
                 <div className="row mt-4 mb-4">
@@ -73,7 +72,7 @@ class Form extends Component {
                             value={this.state.username} onChange={this.handleChange('username')}
                             InputProps={{
                                 startAdornment: <InputAdornment className="label_input" position="start">
-                                    <Translate _app={this.props._app}>login.username</Translate>
+                                    Username
                                 </InputAdornment>,
                             }}
                         />
@@ -85,7 +84,7 @@ class Form extends Component {
                             value={this.state.password} onChange={this.handleChange('password')}
                             InputProps={{
                                 startAdornment: <InputAdornment className="label_input" position="start">
-                                    <Translate _app={this.props._app}>login.password</Translate>
+                                    Password
                                 </InputAdornment>,
                             }}
                         />
@@ -97,16 +96,16 @@ class Form extends Component {
                             control={
                                 <Checkbox  value={this.state.remember} onChange={this.handleChange('remember')} />
                             }
-                            label={<Translate _app={this.props._app}>login.remember</Translate>}
+                            label='Remember me'
                         />
                     </div>
                     <div className="col-md-6 text-right forget">
-                        <a className="text" href="/"><Translate _app={this.props._app}>login.forget_user</Translate></a>
+                        <a className="text" href="/">Forgot my password</a>
                     </div>
                 </div>
                 <div className="row mt-2">
                     <div className="col-md-12 text-right">
-                        <button className="btn btnlogin"><Translate _app={this.props._app}>login.login</Translate></button>
+                        <button className="btn btnlogin">Login</button>
                     </div>
                 </div>
             </form>

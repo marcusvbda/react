@@ -6,15 +6,11 @@ import NavBar from './-NavBar';
 
 
 class Template extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
 
     render() {
         return <div>
             <div id="wrapper">
-                <SideBar _app={this.props._app}/>
+                <SideBar _app={this.props._app} />
                 <div id="content-wrapper" className="d-flex flex-column">
                     <div id="content">
                         <NavBar _app={this.props._app}/>

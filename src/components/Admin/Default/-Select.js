@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 const style = 
 {
     width:"100%",
-    height: "40px"
+    height: "40px",
+    backgroundColor: "transparent"
 }
 class Select extends Component {
 

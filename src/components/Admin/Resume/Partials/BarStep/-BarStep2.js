@@ -26,7 +26,7 @@ class BarStep2 extends Component {
 
         <div className="row">
           <div className="col-md-6">
-            <Input placeholder={"Emergency Contact Name**"} name="contact_name" required />
+            <Input placeholder={"Emergency Contact Name*"} name="contact_name" required />
           </div>
           <div className="col-md-6">
             <Input placeholder={"Emergency Contact Phone*"} name="contact_phone" required />
@@ -45,7 +45,7 @@ class BarStep2 extends Component {
           </div>
         </div>
 
-        <div className="row text-right mr-0 mt-2 resume_continue">
+        <div className="row text-right mr-0 mt-3 resume_continue">
           <span className="col-md-10"></span>
           <button className="col-md-2 btn_continue text-center" onClick={(e) => this.continue(3)}>Continue</button>
         </div>

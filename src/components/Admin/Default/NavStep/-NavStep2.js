@@ -15,7 +15,7 @@ class NavStep2 extends Component {
 
   render() {
     return <div>
-              <span style={style}  className={this.props._app.get("resume").bar_step===1 ? 'item active' : 'item'} ><b>1.</b>Basic Information</span>
+              <span style={style}  className={this.props._app.get("resume").bar_step===1 ? 'item active' : 'item'} ><b>1.</b>PreScreening</span>
               <span className="separator">/</span>
           </div>;
   }

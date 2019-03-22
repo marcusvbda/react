@@ -25,7 +25,7 @@ class Step4 extends Component {
           <h1 className="h3 mb-0 text-black-800"><b>444</b></h1>
         </div>
 
-        <div className="row text-right mr-0 mt-2 resume_continue">
+        <div className="row text-right mr-0 mt-3 resume_continue">
           <span className="col-md-10"></span>
           <button className="col-md-2 btn_continue text-center" onClick={(e) => this.continue()}>Continue</button>
         </div>

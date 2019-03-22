@@ -42,7 +42,7 @@ class NavBar extends Component {
     render() {
         return  <div>
                     <nav className="navbar pr-0 mt-0 navbar-expand navbar-light bg-white-custom topbar mb-4 static-top shadow">
-                        <div className="nav_items d-flex align-items-center">
+                        <div className="nav_items ">
                             {this.getBar()}
                         </div>
                         <ul className="navbar-nav ml-auto">

@@ -52,7 +52,7 @@ class Step1 extends Component {
             </Select>
           </div>
         </div>
-        <div className="row text-right mr-0 mt-2 resume_continue">
+        <div className="row text-right mr-0 mt-3 resume_continue">
           <span className="col-md-10"></span>
           <button className="col-md-2 btn_continue text-center" onClick={(e) => this.continue()}>Continue</button>
         </div>
